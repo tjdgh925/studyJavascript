@@ -1,0 +1,78 @@
+body{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.body{
+    width: 70%;
+    height: 75vh;
+    border: 1px solid black;
+}
+.header{
+    width: 60%;
+    padding: 5% 5% 0 5%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+.date{
+    font-size: 300%;
+    padding-right: 10px;
+}
+.day{
+    font-size: 120%;
+}
+.date-column{
+    display: flex;
+    align-items: center;
+}
+.add-items{
+    position: absolute;
+    bottom: 13%;
+    background-color: white;
+}
+.container{
+    margin-top: 20%;
+    overflow-Y: auto;
+    height: 80%;
+}
+.todo-list{
+    text-align: left;
+    list-style: none;
+}
+.todo-list label{
+    flex: 1;
+    cursor: pointer;
+}
+.todo-list li{
+    padding: 10px 0;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+.add-items input[type=text]{
+    margin-right: 10px;
+    text-align: left;
+}
+.add-items input[type=submit]
+{
+
+}
+
+
+.plates input {
+  display: none;
+}
+
+.plates input + label:before {
+  content: "⬜️";
+  margin-right: 10px;
+}
+
+.plates input:checked + label:before {
+  content: "🌮";
+}
