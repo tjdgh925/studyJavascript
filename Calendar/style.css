@@ -1,0 +1,36 @@
+.mainScreen{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+h1{
+    font-weight: 900;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.monthSelect{
+    display: flex;
+    margin-bottom: 20px;
+    font-size: 25px;
+    width: 60%;
+    padding: 0px 20px;
+    justify-content: space-between;
+}
+.monthSelect > button{
+    justify-content: space-between;
+    font-size: 30px;
+    background: none;
+    border: none;
+}
+.calendar{
+    font-size: 20px;
+    width: 70%;
+    border-spacing: 30px 20px;
+}
+th, td{
+    border: 1px solid rgba(0,0,0,0.7);
+
+}
