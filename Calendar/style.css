@@ -5,6 +5,7 @@
     justify-content: center;
     min-height: 100vh;
     align-items: center;
+    background-color: rgb(222, 171, 43);
 }
 h1{
     font-weight: 900;
@@ -30,7 +31,15 @@ h1{
     width: 70%;
     border-spacing: 30px 20px;
 }
-th, td{
-    border: 1px solid rgba(0,0,0,0.7);
-
+.sunday{
+    color: red;
+}
+.saturday{
+    color: blue;
+}
+.today{
+    background-color: darkgreen;
+}
+.selected{
+    background-color: darksalmon;
 }
