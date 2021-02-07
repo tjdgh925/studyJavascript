@@ -37,6 +37,7 @@ function setDate(){
         }
         cell = row.insertCell();
         cell.classList.add('day');
+        cell.id = i;
         cell.innerHTML = i;
         cnt++;
         if(cnt%7 === 0)
@@ -44,7 +45,7 @@ function setDate(){
         else if(cnt == 1)
             cell.classList.add('sunday');
         if(i === todayDate){
-            cell.classList.add('today');
+            cell.classList.add('selected');
         }
     }
 }
@@ -74,11 +75,21 @@ function changeMonth(e){
     setMonth();
     setDate();
 }
+//날짜를 클릭할 경우 날짜에 배경이 생기도록 하는 함수.
 function clickCalendar(e){
-    for(var i = 1; i <= endOfMonth[first.getMonth()]; i++)
-    if(e.target.classList.contains('day'))
+    var group = [];
+    for(var i = 1; i <= endOfMonth[first.getMonth()]; i++){
+        group[i] = document.getElementById(i);
+        if(group[i].classList.contains('selected')){
+            group[i].classList.remove('selected') 
+        }
+    }
+    if(e.target.classList.contains('day')){
         e.target.classList.add('selected');
-    // if(e.target.)
+    }
+        // if(e.target.)
+    // }
+    
 }
 setMonth();
 setDate();

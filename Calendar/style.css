@@ -1,4 +1,5 @@
 .mainScreen{
+    position: relative;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -12,14 +13,22 @@ h1{
     font-size: 50px;
     margin-bottom: 20px;
 }
-.monthSelect{
+.header{
+    position: absolute;
     display: flex;
+    flex-direction: column;
     margin-bottom: 20px;
     font-size: 25px;
-    width: 60%;
     padding: 0px 20px;
-    justify-content: space-between;
+    width:  60%;
+    top: 25%;
 }
+.monthSelect{
+    justify-content: space-between;
+    display: flex;
+    width:  100%;
+}
+
 .monthSelect > button{
     justify-content: space-between;
     font-size: 30px;
@@ -27,10 +36,16 @@ h1{
     border: none;
 }
 .calendar{
+    cursor: pointer;
+    position: absolute;
+    box-sizing: border-box;
+    top: 45%;
     font-size: 20px;
     width: 70%;
-    border-spacing: 30px 20px;
+    table-layout: fixed;
+    border-spacing: 20px 20px;
 }
+
 .sunday{
     color: red;
 }
@@ -41,5 +56,6 @@ h1{
     background-color: darkgreen;
 }
 .selected{
-    background-color: darksalmon;
+    background-color: rgba(164, 69, 37, 0.564);
+    border-radius: 30%;
 }
